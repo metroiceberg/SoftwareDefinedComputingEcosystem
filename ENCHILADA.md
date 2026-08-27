@@ -30,7 +30,64 @@ SDCE is not founded on the assumption that the answer is yes. That is the hypoth
 
 ---
 
-## 2. Why This Matters
+## 2. Foundational Starting Point: Single-System Feasibility
+
+The vision of SDCE extends to distributed collections of independently controlled computers. **The research does not begin there.**
+
+Before the broader ecosystem can be meaningfully evaluated, the fundamental premise must first be examined within the smallest useful environment: **a single conventional PC**.
+
+The first research question is:
+
+> **Can one physical computer expose its heterogeneous computational capabilities as independently addressable resources and dynamically allocate those resources among workloads while preserving the host system's functionality?**
+
+This is the project's initial feasibility gate.
+
+A successful demonstration would not prove the broader SDCE ecosystem. It would establish that the core resource abstraction is technically plausible in a controlled environment and provide a foundation for progressively more complex research.
+
+A failure would be equally valuable. If the premise cannot be made coherent or practical within one system, the reasons for that failure must be understood before expanding the scope.
+
+### Phase 0 — Single-System Feasibility
+
+Phase 0 focuses exclusively on the minimum architecture necessary to test the central abstraction within one PC.
+
+Potential areas of investigation include:
+
+- resource discovery
+- CPU resource abstraction
+- GPU resource abstraction
+- memory resource abstraction
+- storage resource abstraction
+- resource allocation
+- resource monitoring
+- resource reclamation
+- workload isolation
+- host-system protection
+- scheduling behavior
+- measurable overhead
+
+Phase 0 does **not** require solving the broader distributed ecosystem.
+
+The following are deliberately outside its initial scope:
+
+- multi-machine orchestration
+- wide-area networking
+- ecosystem-wide scheduling
+- decentralized trust
+- economic incentives
+- large-scale resource markets
+- massive distributed workloads
+
+Those questions become meaningful only after the foundational single-system premise has survived initial examination.
+
+The research progression is therefore:
+
+**Single PC → Local multi-resource abstraction → Multi-system environment → Distributed ecosystem → Large-scale ecosystem**
+
+Each step should be justified by evidence from the previous step rather than assumed in advance.
+
+---
+
+## 3. Why This Matters
 
 A substantial amount of computing capacity is intermittently idle.
 
@@ -48,7 +105,7 @@ This is a research proposition, not a demonstrated result.
 
 ---
 
-## 3. Resource Abstraction
+## 4. Resource Abstraction
 
 The key abstraction is the separation of **computational capability** from the physical device that provides it.
 
@@ -72,7 +129,7 @@ Potential resource attributes include capability, capacity, availability, locali
 
 ---
 
-## 4. The Ecosystem Model
+## 5. The Ecosystem Model
 
 SDCE is intended to be an ecosystem rather than a single centralized machine or service.
 
@@ -104,7 +161,7 @@ These roles are conceptual. Their eventual implementation boundaries remain subj
 
 ---
 
-## 5. Voluntary Participation and Ownership
+## 6. Voluntary Participation and Ownership
 
 A foundational principle of SDCE is that participation should be voluntary.
 
@@ -127,7 +184,7 @@ This distinction is important: **resource participation is not resource ownershi
 
 ---
 
-## 6. Local-First Resource Behavior
+## 7. Local-First Resource Behavior
 
 A participating system must remain useful to its owner.
 
@@ -147,7 +204,7 @@ The exact policies and scheduling mechanisms required to accomplish this safely 
 
 ---
 
-## 7. Heterogeneous Computing
+## 8. Heterogeneous Computing
 
 SDCE must assume that participating systems will differ.
 
@@ -171,7 +228,7 @@ This leads toward a capability-oriented model rather than a simple machine-orien
 
 ---
 
-## 8. Distributed Execution
+## 9. Distributed Execution
 
 Resource discovery and allocation are only part of the problem.
 
@@ -198,7 +255,7 @@ A central research objective is therefore to identify the classes of workloads f
 
 ---
 
-## 9. Security and Trust
+## 10. Security and Trust
 
 A computational ecosystem composed of independently controlled systems creates significant security challenges.
 
@@ -224,7 +281,7 @@ Security therefore cannot be treated as an optional feature added after the comp
 
 ---
 
-## 10. Economics and Incentives
+## 11. Economics and Incentives
 
 A large computational ecosystem raises a second question beyond technical feasibility: **why would people participate?**
 
@@ -245,7 +302,7 @@ These mechanisms are future research areas, not settled components of the archit
 
 ---
 
-## 11. Potential Applications
+## 12. Potential Applications
 
 If the underlying architecture proves viable, SDCE could potentially support workloads such as:
 
@@ -267,7 +324,7 @@ The practical value of such a pool depends on scheduling, networking, security, 
 
 ---
 
-## 12. Research and Implementation Are Separate
+## 13. Research and Implementation Are Separate
 
 This repository is the **research and specification workspace** for SDCE. It is not the production implementation repository.
 
@@ -285,7 +342,7 @@ Small experimental software may exist in the research repository when it serves 
 
 ---
 
-## 13. Research Discipline
+## 14. Research Discipline
 
 The project distinguishes among several states of knowledge:
 
@@ -304,11 +361,15 @@ The purpose of experimentation is to discover what is true, not to manufacture c
 
 ---
 
-## 14. The Research Path
+## 15. The Research Path
 
 The project should progress incrementally rather than attempting to design the entire production system at once.
 
-A useful progression is:
+The primary progression begins with the single-system feasibility gate:
+
+**Single PC → Local multi-resource abstraction → Multi-system environment → Distributed ecosystem → Large-scale ecosystem**
+
+Within each stage, the research should proceed through:
 
 **Concept → Formalization → Model → Simulation → Prototype → Experiment → Evidence → Specification**
 
@@ -320,11 +381,13 @@ The guiding working principle is:
 
 ---
 
-## 15. Open Research Questions
+## 16. Open Research Questions
 
 The project currently has many questions that should remain questions until investigated.
 
-Among them:
+The immediate priority is determining whether the foundational single-system model is technically feasible and useful enough to justify broader investigation.
+
+Beyond that gate, major questions include:
 
 1. What is the correct abstraction for heterogeneous computational resources?
 2. How should resources advertise capabilities and availability?
@@ -340,13 +403,13 @@ Among them:
 12. What incentive structures are viable?
 13. Can distributed idle capacity provide meaningful economic or computational advantages over conventional infrastructure?
 14. At what scale does coordination become a limiting factor?
-15. What minimum architecture is sufficient to experimentally validate the central hypothesis?
+15. What minimum architecture is sufficient to experimentally validate each successive stage?
 
 These questions define research opportunities rather than promises of eventual capabilities.
 
 ---
 
-## 16. Long-Term Vision
+## 17. Long-Term Vision
 
 The long-term vision of SDCE is a world in which computational capacity can be treated more like a dynamically available utility than a permanently attached property of individual machines.
 
@@ -364,7 +427,7 @@ The objective is to determine what the evidence supports.
 
 ---
 
-## 17. Repository Role
+## 18. Repository Role
 
 This document represents the current **whole enchilada**: the broadest current description of what SDCE is trying to investigate and why.
 
